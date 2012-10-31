@@ -189,8 +189,7 @@ After all this is set, if you run diff commands such as this:
 
 Instead of getting the diff output on the command line, Git fires up P4Merge, which looks something like Figure 7-1.
 
-Insert 18333fig0701.png 
-Figure 7-1. P4Merge.
+![Figure 7-1. P4Merge.](../../figures/18333fig0701-tn.png)
 
 If you try to merge two branches and subsequently have merge conflicts, you can run the command `git mergetool`; it starts P4Merge to let you resolve the conflicts through that GUI tool.
 
@@ -453,11 +452,9 @@ However, that result is of limited use. If you’ve used keyword substitution in
 
 It turns out that you can write your own filters for doing substitutions in files on commit/checkout. These are the "clean" and "smudge" filters. In the `.gitattributes` file, you can set a filter for particular paths and then set up scripts that will process files just before they’re checked out ("smudge", see Figure 7-2) and just before they’re committed ("clean", see Figure 7-3). These filters can be set to do all sorts of fun things.
 
-Insert 18333fig0702.png 
-Figure 7-2. The “smudge” filter is run on checkout.
+![Figure 7-2. The “smudge” filter is run on checkout.](../../figures/18333fig0702-tn.png)
 
-Insert 18333fig0703.png 
-Figure 7-3. The “clean” filter is run when files are staged.
+![Figure 7-3. The “clean” filter is run when files are staged.](../../figures/18333fig0703-tn.png)
 
 The original commit message for this functionality gives a simple example of running all your C source code through the `indent` program before committing. You can set it up by setting the filter attribute in your `.gitattributes` file to filter `*.c` files with the "indent" filter:
 
